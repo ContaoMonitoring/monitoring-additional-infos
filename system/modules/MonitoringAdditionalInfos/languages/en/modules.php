@@ -30,6 +30,6 @@
 /**
  * Define name and tooltip for preferences (inactive modules)
  */
-$GLOBALS['TL_LANG']['MOD']['MonitoringAdditionalInfos'] = 'Provides additional Fields for an entry in the Contao monitoring system.';
+$GLOBALS['TL_LANG']['MOD']['MonitoringAdditionalInfos'] = 'Provides additional fields for an entry in the Contao monitoring system.';
 
 ?>
