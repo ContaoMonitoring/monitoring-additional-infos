@@ -1,0 +1,36 @@
+{
+	"name":"contao-monitoring/monitoring-additional-infos",
+	"description":"Provides additional fields for an entry in the Contao monitoring system.",
+	"keywords":["contao", "monitoring", "additional fields"],
+	"type":"contao-module",
+	"license":"LGPL-3.0+",
+	"authors":[
+		{
+			"name":"Cliff Parnitzky",
+			"email":"contao@cliff-parnitzky.de",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"email":"contao@cliff-parnitzky.de",
+		"issues":"https://github.com/ContaoMonitoring/monitoring-additional-infos/issues",
+		"source":"https://github.com/ContaoMonitoring/monitoring-additional-infos"
+	},
+	"require":{
+		"php":">=5.3",
+		"contao/core":">=3.0.0,<4.0.0-dev",
+		"contao-community-alliance/composer-installer":"*",
+		"contao-monitoring/monitoring":">=1.4.0",
+		"menatwork/contao-multicolumnwizard":"*"
+	},
+	"extra":{
+		"contao":{
+			"sources":{
+				"system/modules/MonitoringAdditionalInfos":"system/modules/MonitoringAdditionalInfos"
+			}
+		},
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}
