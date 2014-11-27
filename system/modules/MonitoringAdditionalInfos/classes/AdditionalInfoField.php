@@ -156,9 +156,9 @@ class AdditionalInfoField extends \Backend
 		
 		if ($strCategory == self::CATEGORY_ACTUALITY || $strCategory == self::CATEGORY_MAINTENANCE)
 		{
-			$arrColumns['actual'] = array
+			$arrColumns['blnValue'] = array
 			(
-				'label'            => &$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_actual'],
+				'label'            => &$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_blnValue'],
 				'exclude'          => true,
 				'inputType'        => 'checkbox',
 				'eval'             => array()
@@ -166,9 +166,9 @@ class AdditionalInfoField extends \Backend
 		}
 		else
 		{
-			$arrColumns['value'] = array
+			$arrColumns['strValue'] = array
 			(
-				'label'            => &$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_value'],
+				'label'            => &$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_strValue'],
 				'exclude'          => true,
 				'inputType'        => 'text'
 			);

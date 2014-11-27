@@ -118,7 +118,7 @@ class MonitoringAdditionalInfosHookImpl extends \Backend
 	        if (!empty($row['field']))
 	        {
 	           // Insert the element after the section
-	           $arrHeaderFields = $this->arrayInsertAfterKey($arrHeaderFields, $strSectionKey, '<div class="tl_inner_label">' . $row['field'] . '</div>', (!empty($row['actual'])) ? ($row['actual'] ? 'Ja' : 'Nein') : $row['value']);
+	           $arrHeaderFields = $this->arrayInsertAfterKey($arrHeaderFields, $strSectionKey, '<div class="tl_inner_label">' . $row['field'] . '</div>', array_key_exists('blnValue', $row) ? ($row['blnValue'] ? '<img src="system/modules/MonitoringAdditionalInfos/assets/yes_small.png" alt="???" title="???" />' : '<img src="system/modules/MonitoringAdditionalInfos/assets/no_small.png" alt="???" title="???" />') : $row['strValue']);
 	           $blnRemoveSection = false;
 	        }
 	    }

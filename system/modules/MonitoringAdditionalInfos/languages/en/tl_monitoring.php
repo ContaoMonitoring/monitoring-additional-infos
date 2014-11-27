@@ -36,8 +36,8 @@ $GLOBALS['TL_LANG']['tl_monitoring']['additional_info_contao']      = array('Con
 $GLOBALS['TL_LANG']['tl_monitoring']['additional_info_maintenance'] = array('Maintenance configuration', 'Specify the data for the maintenance of this monitoring entry.');
 $GLOBALS['TL_LANG']['tl_monitoring']['additional_info_system']      = array('System configuration', 'Specify the data of the web system for this monitoring entry.');
 $GLOBALS['TL_LANG']['tl_monitoring']['additional_info_field']       = array('Field', 'Select a field.');
-$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_actual']      = array('Yes or no', 'Specify whether the field condition is true.');
-$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_value']       = array('Value', 'Enter a value for the field.');
+$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_blnValue']    = array('Yes or no', 'Specify whether the field condition is true.');
+$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_strValue']    = array('Value', 'Enter a value for the field.');
 
 /**
  * Legenden
