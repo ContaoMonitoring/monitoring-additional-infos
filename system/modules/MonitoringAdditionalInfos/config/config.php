@@ -28,12 +28,8 @@
  */
 
 /**
- * Frontend modules
- */
-
-/**
  * Hooks
  */
-$GLOBALS['TL_HOOKS']['monitoringExtendEntryHeader'][] = array('MonitoringAdditionalInfosHookImpl', 'addAdditionalInfosToHeader');
+array_insert($GLOBALS['TL_HOOKS']['monitoringExtendEntryHeader'], 0, array(array('MonitoringAdditionalInfosHookImpl', 'addAdditionalInfosToHeader')));
 
 ?>

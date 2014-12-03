@@ -40,7 +40,7 @@ $GLOBALS['TL_LANG']['tl_monitoring']['additional_info_blnValue']    = array('Yes
 $GLOBALS['TL_LANG']['tl_monitoring']['additional_info_strValue']    = array('Value', 'Enter a value for the field.');
 
 /**
- * Legenden
+ * Legends
  */
 $GLOBALS['TL_LANG']['tl_monitoring']['additional_info_legend'] = 'Additional information';
 
