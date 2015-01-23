@@ -59,12 +59,12 @@ class MonitoringAdditionalInfosHookImpl extends \Backend
 	public function addAdditionalInfosToHeader($arrHeaderFields, \DataContainer $dc)
 	{
 	    $GLOBALS['TL_CSS'][] = 'system/modules/MonitoringAdditionalInfos/assets/styles.css';
-	    
+
 	    $monitoringEntryId = (int) $dc->id;
-	    $objMonitoringEntry = $this->Database->prepare("SELECT * FROM tl_monitoring WHERE id = ?")
-	                                         ->execute($monitoringEntryId);
-	    	
-	    if ($objMonitoringEntry->numRows == 1)
+
+	   $objMonitoringEntry = \MonitoringModel::findByPK($monitoringEntryId);
+
+	    if ($objMonitoringEntry !== null)
 	    {
 	        $arrHeaderFields[$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_actuality'][0]] = "";
 	        $arrHeaderFields = $this->getPreparedFieldData($objMonitoringEntry->additional_info_actuality, $arrHeaderFields, $GLOBALS['TL_LANG']['tl_monitoring']['additional_info_actuality'][0]);
@@ -89,36 +89,36 @@ class MonitoringAdditionalInfosHookImpl extends \Backend
 	        unset($arrHeaderFields[$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_maintenance'][0]]);
 	        unset($arrHeaderFields[$GLOBALS['TL_LANG']['tl_monitoring']['additional_info_system'][0]]);
 	    }
-	    
+
 		return $arrHeaderFields;
 	}
-	
+
 	/**
 	 * Retruns the prepared data of a field.
-	 * 
+	 *
 	 * @param string $strFieldData
 	 * @return string The prepared data.
 	 */
 	private function getPreparedFieldData($strFieldData, $arrHeaderFields, $strSectionKey)
 	{
 	    $arrRows = deserialize($strFieldData);
-	    
+
 	    if (empty($arrRows))
 	    {
 	        // Remove a section that has no data
 	        unset($arrHeaderFields[$strSectionKey]);
-	        return $arrHeaderFields;	        
+	        return $arrHeaderFields;
 	    }
-	    
+
 	    $arrRows = array_reverse($arrRows);
-	    
+
 	    $blnRemoveSection = true;
 	    foreach ($arrRows as $row)
 	    {
 	        if (!empty($row['field']))
 	        {
 	           // Insert the element after the section
-	           $arrHeaderFields = $this->arrayInsertAfterKey($arrHeaderFields, $strSectionKey, '<div class="tl_inner_label">' . $row['field'] . '</div>', array_key_exists('blnValue', $row) ? ($row['blnValue'] ? '<img src="system/modules/MonitoringAdditionalInfos/assets/yes_small.png" alt="???" title="???" />' : '<img src="system/modules/MonitoringAdditionalInfos/assets/no_small.png" alt="???" title="???" />') : $row['strValue']);
+	           $arrHeaderFields = $this->arrayInsertAfterKey($arrHeaderFields, $strSectionKey, '<div class="tl_inner_label">' . $row['field'] . '</div>', array_key_exists('blnValue', $row) ? ($row['blnValue'] ? '<img src="system/modules/MonitoringAdditionalInfos/assets/yes_small.png" alt="' . $GLOBALS['TL_LANG']['MonitoringAdditionalInfos']['yes'] . '" title="' . $GLOBALS['TL_LANG']['MonitoringAdditionalInfos']['yes'] . '" />' : '<img src="system/modules/MonitoringAdditionalInfos/assets/no_small.png" alt="' . $GLOBALS['TL_LANG']['MonitoringAdditionalInfos']['no'] . '" title="' . $GLOBALS['TL_LANG']['MonitoringAdditionalInfos']['no'] . '" />') : $row['strValue']);
 	           $blnRemoveSection = false;
 	        }
 	    }
@@ -129,10 +129,10 @@ class MonitoringAdditionalInfosHookImpl extends \Backend
 	    }
 	    return $arrHeaderFields;
 	}
-	
+
 	/**
 	 * Insert an assoc key/value pair after the given key in the given array.
-	 * 
+	 *
 	 * @param array $array The array to insert the new key/value pair.
 	 * @param string $afterKey The key of the array element to insert the new key/value pair after.
 	 * @param string $key The key of the key/value pair to be inserted.
@@ -142,7 +142,7 @@ class MonitoringAdditionalInfosHookImpl extends \Backend
 	private function arrayInsertAfterKey($array, $afterKey, $key, $value)
 	{
 	    $pos   = array_search($afterKey, array_keys($array)) + 1;
-	
+
 	    return array_merge
 	    (
 	        array_slice($array, 0, $pos, true),
