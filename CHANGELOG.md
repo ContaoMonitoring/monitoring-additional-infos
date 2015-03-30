@@ -2,7 +2,7 @@
 Contao Extension "MonitoringAdditionalInfos"
 ============================================
 
-Version 1.0.2 (2015-01-xx)
+Version 1.1.0 (2015-03-30)
 --------------------------
 - using `MonitoringModel` to get monitoring entries
 - added missing tooltip translations for yes/no icons
