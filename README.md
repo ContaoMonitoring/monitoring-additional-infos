@@ -24,11 +24,13 @@ https://github.com/ContaoMonitoring/monitoring-additional-infos/issues
 Compatibility
 -------------
 
-- min. version: Contao 3.0.x
-- max. version: Contao 3.4.x
+- min. Contao version: >= 3.2.0
+- max. Contao version: <  3.6.0
 
 
 Dependency
 ----------
 
-- This extension is dependent on the following extensions: [[contao-monitoring/monitoring]](https://packagist.org/packages/contao-monitoring/monitoring), [[menatwork/contao-multicolumnwizard]](https://packagist.org/packages/menatwork/contao-multicolumnwizard)
+This extension is dependent on the following extensions:
+- [[contao-monitoring/monitoring]](https://packagist.org/packages/contao-monitoring/monitoring)
+- [[menatwork/contao-multicolumnwizard]](https://packagist.org/packages/menatwork/contao-multicolumnwizard)

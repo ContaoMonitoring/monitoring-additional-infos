@@ -3,6 +3,7 @@
 	"description":"Provides additional fields for an entry in the Contao Monitoring system.",
 	"keywords":["contao", "monitoring", "additional fields"],
 	"type":"contao-module",
+  "homepage":"https://github.com/ContaoMonitoring/monitoring-additional-infos",
 	"license":"LGPL-3.0+",
 	"authors":[
 		{
@@ -18,10 +19,10 @@
 	},
 	"require":{
 		"php":">=5.3",
-		"contao/core":">=3.0.0,<4.0.0-dev",
+		"contao/core":">=3.2.0,<3.6",
 		"contao-community-alliance/composer-plugin":"~2.0",
-		"contao-monitoring/monitoring":">=1.7.0",
-		"menatwork/contao-multicolumnwizard":"*"
+		"contao-monitoring/monitoring":"~1.7",
+		"menatwork/contao-multicolumnwizard":"~3.3"
 	},
 	"extra":{
 		"contao":{
