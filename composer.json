@@ -3,7 +3,7 @@
 	"description":"Provides additional fields for an entry in the Contao Monitoring system.",
 	"keywords":["contao", "monitoring", "additional fields"],
 	"type":"contao-module",
-  "homepage":"https://github.com/ContaoMonitoring/monitoring-additional-infos",
+	"homepage":"https://github.com/ContaoMonitoring/monitoring-additional-infos",
 	"license":"LGPL-3.0+",
 	"authors":[
 		{
