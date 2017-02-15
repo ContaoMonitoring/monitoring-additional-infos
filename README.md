@@ -11,8 +11,9 @@ Provides additional fields for an entry in the [[Contao Monitoring]](https://git
 Installation
 ------------
 
-The extension is not published in contao extension repository.
-Install it manually or via composer: [contao-monitoring/monitoring-additional-infos](https://packagist.org/packages/contao-monitoring/monitoring-additional-infos).
+Install the extension via composer: [contao-monitoring/monitoring-additional-infos](https://packagist.org/packages/contao-monitoring/monitoring-additional-infos).
+
+If you prefer to install it manually, download the latest release here: https://github.com/ContaoMonitoring/monitoring-additional-infos/releases
 
 
 Tracker
@@ -32,5 +33,6 @@ Dependency
 ----------
 
 This extension is dependent on the following extensions:
+
 - [[contao-monitoring/monitoring]](https://packagist.org/packages/contao-monitoring/monitoring)
 - [[menatwork/contao-multicolumnwizard]](https://packagist.org/packages/menatwork/contao-multicolumnwizard)
