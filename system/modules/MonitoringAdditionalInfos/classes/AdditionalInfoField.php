@@ -185,7 +185,7 @@ class AdditionalInfoField extends \Backend
 	{
 		$fields = array();
 		
-		$configuredFields = deserialize($GLOBALS['TL_CONFIG']['monitoringAdditionalInfoFields']);
+		$configuredFields = deserialize($GLOBALS['TL_CONFIG']['monitoringAdditionalInfoFields'], true);
 		
 		foreach ($configuredFields as $field)
 		{

@@ -2,6 +2,10 @@
 Contao Extension "MonitoringAdditionalInfos"
 ============================================
 
+Version 1.1.3 (2017-06-28)
+--------------------------
+- Contao 4 ready
+
 Version 1.1.2 (2016-10-25)
 --------------------------
 - Contao 3.5 ready
