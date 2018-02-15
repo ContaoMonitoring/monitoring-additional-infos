@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2014 Leo Feyer
+ * Copyright (C) 2005-2018 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2014
+ * @copyright  Cliff Parnitzky 2014-2018
  * @author     Cliff Parnitzky
  * @package    MonitoringAdditionalInfos
  * @license    LGPL
@@ -36,7 +36,7 @@ namespace Monitoring;
  * Class AdditionalInfoField
  *
  * Define some functions for the additional info fields
- * @copyright  Cliff Parnitzky 2014
+ * @copyright  Cliff Parnitzky 2014-2018
  * @author     Cliff Parnitzky
  * @package    Controller
  */
@@ -185,7 +185,7 @@ class AdditionalInfoField extends \Backend
 	{
 		$fields = array();
 		
-		$configuredFields = deserialize($GLOBALS['TL_CONFIG']['monitoringAdditionalInfoFields'], true);
+		$configuredFields = deserialize(\Config::get('monitoringAdditionalInfoFields'));
 		
 		foreach ($configuredFields as $field)
 		{
