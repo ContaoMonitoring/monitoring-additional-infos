@@ -1,33 +1,37 @@
 {
-	"name":"contao-monitoring/monitoring-additional-infos",
-	"description":"Provides additional fields for an entry in the Contao Monitoring system.",
-	"keywords":["contao", "monitoring", "additional fields"],
-	"type":"contao-module",
-	"homepage":"https://github.com/ContaoMonitoring/monitoring-additional-infos",
-	"license":"LGPL-3.0+",
-	"authors":[
+	"name": "contao-monitoring/monitoring-additional-infos",
+	"description": "Provides additional fields for an entry in the Contao Monitoring system.",
+	"keywords": [
+		"contao",
+		"monitoring",
+		"additional fields"
+	],
+	"type": "contao-module",
+	"homepage": "https://github.com/ContaoMonitoring",
+	"license": "LGPL-3.0+",
+	"authors": [
 		{
-			"name":"Cliff Parnitzky",
-			"email":"contao@cliff-parnitzky.de",
-			"role":"Developer"
+			"name": "Cliff Parnitzky",
+			"email": "contao@cliff-parnitzky.de",
+			"role": "Developer"
 		}
 	],
-	"support":{
-		"email":"contao@cliff-parnitzky.de",
-		"issues":"https://github.com/ContaoMonitoring/monitoring-additional-infos/issues",
-		"source":"https://github.com/ContaoMonitoring/monitoring-additional-infos"
+	"support": {
+		"email": "contao@cliff-parnitzky.de",
+		"issues": "https://github.com/ContaoMonitoring/monitoring-additional-infos/issues",
+		"source": "https://github.com/ContaoMonitoring/monitoring-additional-infos"
 	},
-	"require":{
-		"php":">=5.3",
-		"contao/core-bundle":"~3.2 || ~4.4",
-		"contao-community-alliance/composer-plugin":"~2.4 || ~3.0",
-		"contao-monitoring/monitoring":"~1.8",
-		"menatwork/contao-multicolumnwizard":"~3.3"
+	"require": {
+		"php": ">=7.4",
+		"contao/core-bundle": "~4.9",
+		"contao-community-alliance/composer-plugin": "~3.0",
+		"contao-monitoring/monitoring": "~1.8",
+		"menatwork/contao-multicolumnwizard": "~3.3"
 	},
-	"extra":{
-		"contao":{
-			"sources":{
-				"system/modules/MonitoringAdditionalInfos":"system/modules/MonitoringAdditionalInfos"
+	"extra": {
+		"contao": {
+			"sources": {
+				"system/modules/MonitoringAdditionalInfos": "system/modules/MonitoringAdditionalInfos"
 			}
 		},
 		"branch-alias": {
